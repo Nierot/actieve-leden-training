@@ -1,10 +1,11 @@
 import express from 'express'
 import * as SibApiV3Sdk from '@sendinblue/client'
+import { key } from './keys';
 
 const app = express()
 const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
-apiInstance.setApiKey(SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, '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')
+apiInstance.setApiKey(SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, key)
 
 app.use(express.json())
 app.use(express.static('static'))
